@@ -1,0 +1,4 @@
+displayName = Celestial Arsenal
+author = Ryrenn
+version = 0.1
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*

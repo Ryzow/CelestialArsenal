@@ -1,0 +1,50 @@
+Items: {
+	CometSword: {
+		DisplayName: Comet Sword
+		Tooltip:
+			'''
+			Benefits from both melee and magic bonuses
+			Calls down a comet from the sky
+			Can be upgraded in Hardmode with 12 Soul of Light and 2 Unicorn Horn
+			'''
+	}
+
+	CometSwordPhase2: {
+		DisplayName: Comet Sword Awakened
+		Tooltip:
+			'''
+			Benefits from both melee and magic bonuses
+			Calls down two comets from the sky
+			Hold right click to charge a giant meteor
+			The meteor falls automatically once fully charged
+			'''
+	}
+}
+
+Projectiles: {
+	CometProjectile.DisplayName: Comet
+	CometChargeProjectile.DisplayName: Comet Charge
+}
+
+DamageClasses.MeleeMagicDamageClass.DisplayName: melee/magic damage
+
+Configs: {
+	CelestialArsenalConfig: {
+		ExplosionSize: {
+			Tooltip: ""
+			Label: Explosion Size
+		}
+
+		BigCometDamageMultiplier: {
+			Tooltip: ""
+			Label: Big Comet Damage Multiplier
+		}
+
+		ChargeTimeSeconds: {
+			Tooltip: ""
+			Label: Charge Time Seconds
+		}
+
+		DisplayName: Celestial Arsenal Config
+	}
+}
