@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using CelestialArsenal.Content.Buffs;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -66,9 +67,23 @@ namespace CelestialArsenal.Content.Items.Weapons
                 return false;
 
             if (player.altFunctionUse == 2)
+            {
+                var cfg = ModContent.GetInstance<CelestialArsenalConfig>();
+
+                // Masih cooldown -> tidak bisa charge
+                if (player.HasBuff(ModContent.BuffType<CometCooldownBuff>()))
+                    return false;
+
+                // Mana belum cukup untuk meteor besar -> tidak bisa mulai charge
+                if (player.statMana < CometMana.Cost(player, cfg.BigCometManaCost))
+                    return false;
+
                 SetRightClickStats();
+            }
             else
+            {
                 SetLeftClickStats();
+            }
 
             return true;
         }
@@ -89,6 +104,10 @@ namespace CelestialArsenal.Content.Items.Weapons
             Vector2 target = Main.MouseWorld;
             for (int i = 0; i < 2; i++)
             {
+                // Tiap komet butuh mana; berhenti kalau mana habis (ayunan tetap jalan)
+                if (!CometMana.TryPay(player, ModContent.GetInstance<CelestialArsenalConfig>().CometManaCost))
+                    break;
+
                 Vector2 spawn = new Vector2(target.X + Main.rand.Next(-300, 301), player.Center.Y - 700f);
                 Vector2 dir = (target - spawn).SafeNormalize(Vector2.UnitY) * Item.shootSpeed;
                 Projectile.NewProjectile(source, spawn, dir, type, damage, knockback, player.whoAmI);
@@ -96,6 +115,11 @@ namespace CelestialArsenal.Content.Items.Weapons
             return false;
         }
 
+
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            CometMana.AddTooltips(Mod, tooltips, hasCharge: true);
+        }
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {

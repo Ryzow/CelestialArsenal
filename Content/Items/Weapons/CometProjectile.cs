@@ -1,7 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
-using Terraria.Graphics.CameraModifiers;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -137,9 +136,7 @@ namespace CelestialArsenal.Content.Items.Weapons
             SoundEngine.PlaySound(SoundID.Item14, Projectile.Center);
 
             // Screen shake: kuat untuk meteor besar, ringan untuk komet kecil
-            if (!Main.dedServ)
-                Main.instance.CameraModifiers.Add(new PunchCameraModifier(Projectile.Center,
-                    Main.rand.NextVector2Unit(), Big ? 16f : 2.5f, 7f, Big ? 35 : 10, 2000f, "CometImpact"));
+            CometShake.Punch(Projectile.Center, Big ? 16f : 2.5f, 7f, Big ? 35 : 10, 2000f, "CometImpact");
 
             int fire = Big ? 90 : 30;
             int blue = Big ? 40 : 12;

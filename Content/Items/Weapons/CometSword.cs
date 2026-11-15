@@ -40,6 +40,10 @@ namespace CelestialArsenal.Content.Items.Weapons
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source,
             Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
+            // Komet butuh mana; kalau mana kurang, pedang tetap bisa diayun tanpa komet
+            if (!CometMana.TryPay(player, ModContent.GetInstance<CelestialArsenalConfig>().CometManaCost))
+                return false;
+
             // Komet kecil jatuh dari langit ke arah kursor
             Vector2 target = Main.MouseWorld;
             Vector2 spawn = new Vector2(target.X + Main.rand.Next(-250, 251), player.Center.Y - 700f);
@@ -49,6 +53,11 @@ namespace CelestialArsenal.Content.Items.Weapons
             return false;
         }
 
+
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            CometMana.AddTooltips(Mod, tooltips, hasCharge: false);
+        }
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {

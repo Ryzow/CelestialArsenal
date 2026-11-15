@@ -22,29 +22,72 @@ Items: {
 }
 
 Projectiles: {
-	CometProjectile.DisplayName: Comet
-	CometChargeProjectile.DisplayName: Comet Charge
+	CometProjectile: {
+		DisplayName: Comet
+	}
+
+	CometChargeProjectile: {
+		DisplayName: Comet Charge
+	}
 }
 
-DamageClasses.MeleeMagicDamageClass.DisplayName: melee/magic damage
+DamageClasses: {
+	MeleeMagicDamageClass: {
+		DisplayName: melee/magic damage
+	}
+}
+
+Buffs: {
+	CometCooldownBuff: {
+		DisplayName: Comet Recharge
+		Description: The sword is recharging its giant meteor
+	}
+}
+
+Common: {
+	CometMana: Each comet uses {0} mana
+	BigCometMana: Giant meteor uses {0} mana
+	BigCometCooldown: Giant meteor cooldown: {0} seconds
+}
 
 Configs: {
 	CelestialArsenalConfig: {
-		ExplosionSize: {
-			Tooltip: ""
-			Label: Explosion Size
-		}
-
-		BigCometDamageMultiplier: {
-			Tooltip: ""
-			Label: Big Comet Damage Multiplier
-		}
-
+		DisplayName: Celestial Arsenal
 		ChargeTimeSeconds: {
-			Tooltip: ""
-			Label: Charge Time Seconds
+			Label: Charge time (seconds)
+			Tooltip: How long right click must be held to charge the giant meteor
 		}
+		BigCometDamageMultiplier: {
+			Label: Giant meteor damage multiplier
+			Tooltip: Giant meteor damage compared to the sword's normal damage
+		}
+		ExplosionSize: {
+			Label: Giant meteor explosion size
+			Tooltip: Width and height of the giant meteor explosion in pixels
+		}
+		CometManaCost: {
+			Label: Mana per comet
+			Tooltip: Mana used by each comet from left click. 0 means free
+		}
+		BigCometManaCost: {
+			Label: Mana per giant meteor
+			Tooltip: Mana used when the giant meteor is released. 0 means free
+		}
+		RightClickCooldownSeconds: {
+			Label: Giant meteor cooldown (seconds)
+			Tooltip: Cooldown after a giant meteor is released. 0 means no cooldown
+		}
+	}
 
-		DisplayName: Celestial Arsenal Config
+	CelestialArsenalClientConfig: {
+		DisplayName: Celestial Arsenal (Client)
+		ScreenShake: {
+			Label: Screen shake
+			Tooltip: Turn off to remove all screen shake from this mod
+		}
+		ScreenShakeIntensity: {
+			Label: Screen shake intensity
+			Tooltip: Lower this to make the shake weaker
+		}
 	}
 }

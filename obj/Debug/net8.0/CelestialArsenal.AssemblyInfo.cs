@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CelestialArsenal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+606e6dcdd8e003cf854bd96621251f2b7f487fe3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8df880a3311af021a33b2aa6434f1b0bdbfe1ad9")]
 [assembly: System.Reflection.AssemblyProductAttribute("CelestialArsenal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CelestialArsenal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

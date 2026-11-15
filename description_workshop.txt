@@ -1,35 +1,57 @@
 [h1]Celestial Arsenal[/h1]
-Unleash the power of the cosmos in Terraria! [b]Celestial Arsenal[/b] introduces a new line of hybrid [b]Melee / Magic[/b] weaponry forged from fallen stars, meteorites, and celestial energy.
+A cosmic sword that is both melee and magic. Swing it to call comets down from the sky, then upgrade it in Hardmode to charge a giant meteor with a right click.
 
-[h2]✨ Key Features[/h2]
+[h2]Features[/h2]
 [list]
-[*][b]Hybrid Melee/Magic Class:[/b] Weapons benefit from both Melee and Magic stat bonuses, allowing flexible builds and devastating combos.
-[*][b]Multi-Phase Evolution:[/b] Upgrade your cosmic blade as you progress into Hardmode to unlock catastrophic new abilities.
+[*] [b]Comet Sword[/b]: a pre-Hardmode sword. Each swing calls a fiery comet down toward your cursor.
+[*] [b]Comet Sword Awakened[/b]: the Hardmode upgrade. Two comets per swing, plus a charge attack.
+[*] [b]Giant meteor[/b]: hold right click to charge, and the meteor falls on its own once fully charged. It explodes in a large area and sets enemies on fire.
+[*] [b]Melee/magic hybrid damage[/b]: benefits from both melee and magic bonuses, such as emblems, armor and buffs.
+[*] [b]Mana and cooldown[/b]: comets cost a little mana, the giant meteor costs more and has a cooldown shown as a buff.
+[*] [b]Glowing sprites[/b]: the fiery and crystal parts of the blade stay bright in the dark.
+[*] [b]Screen shake[/b] on explosions, which can be turned off in the client config.
 [/list]
 
-[h2]⚔️ Weapons Included[/h2]
-
-[b]1. Comet Sword (Phase 1 - Pre-Hardmode)[/b]
+[h2]Recipes[/h2]
+[b]Comet Sword[/b]
 [list]
-[*][b]Damage Type:[/b] Melee / Magic
-[*][b]Ability:[/b] Calls down glowing cosmic comets from the sky toward your cursor on every swing, inflicting [i]Frostburn[/i] and [i]On Fire![/i] on impact.
-[*][b]Recipe (Iron / Lead Anvil):[/b] 15x Meteorite Bar + 10x Fallen Star
+[*] 12 Meteorite Bar
+[*] 10 Fallen Star
+[*] Crafted at an Anvil
 [/list]
 
-[b]2. Celestial Comet Sword (Phase 2 - Hardmode)[/b]
+[b]Comet Sword Awakened[/b]
 [list]
-[*][b]Damage Type:[/b] Melee / Magic
-[*][b]Left-Click:[/b] Rains down high-velocity cosmic comets at rapid speed.
-[*][b]Right-Click (Special):[/b] Consumes Mana to summon a [b]Giant Meteor[/b] from the heavens that obliterates enemies on impact!
-[*][b]Recipe (Mythril / Orichalcum Anvil):[/b] 1x Comet Sword + 12x Soul of Light + 2x Unicorn Horn
+[*] 1 Comet Sword
+[*] 12 Soul of Light
+[*] 2 Unicorn Horn
+[*] Crafted at a Mythril or Orichalcum Anvil (Hardmode)
 [/list]
 
-[h2]🔗 Source Code & Feedback[/h2]
-Found a bug or have weapon suggestions? Feel free to leave a comment below or check out the project on GitHub!
-
-[h2]☕ Support the Mod[/h2]
-If you enjoy [b]Celestial Arsenal[/b] and want to support future updates and new cosmic weapons, consider buying me a coffee!
+[h2]How to use[/h2]
 [list]
-[*][b]Patreon:[/b] [url=https://www.patreon.com/cw/Ryrenn]patreon.com/Ryrenn[/url]
-[*][b]Saweria (Indonesia):[/b] [url=https://saweria.co/ryrenn]saweria.co/ryrenn[/url]
+[*] [b]Left click[/b]: swing the sword and call comets from the sky.
+[*] [b]Right click (hold)[/b]: raise the sword and charge. Releasing early cancels the charge. Awakened form only.
+[/list]
+
+[h2]Configuration[/h2]
+[b]Server config[/b] (Settings, Mod Configuration)
+[list]
+[*] Charge time
+[*] Giant meteor damage multiplier
+[*] Giant meteor explosion size
+[*] Mana cost per comet and per giant meteor
+[*] Giant meteor cooldown
+[/list]
+[b]Client config[/b]
+[list]
+[*] Screen shake on or off
+[*] Screen shake intensity
+[/list]
+
+[h2]Notes[/h2]
+[list]
+[*] The sprites are AI-assisted pixel art that was cleaned up and recolored by hand.
+[*] This is an early version. Balance changes and more content (armor, accessories) are planned.
+[*] Bug reports and balance feedback are welcome in the comments.
 [/list]

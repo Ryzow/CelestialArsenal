@@ -4,7 +4,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent;
-using Terraria.Graphics.CameraModifiers;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -123,11 +122,23 @@ namespace CelestialArsenal.Content.Items.Weapons
 
         private void FireBigComet(Player player)
         {
+            var cfg = ModContent.GetInstance<CelestialArsenalConfig>();
+
+            // Mana dibayar saat meteor benar-benar keluar; kalau mana habis saat charge, meteor batal
+            if (Main.myPlayer == Projectile.owner && !CometMana.TryPay(player, cfg.BigCometManaCost))
+            {
+                for (int i = 0; i < 15; i++)
+                {
+                    Dust d = Dust.NewDustPerfect(Projectile.Center, DustID.Smoke,
+                        Main.rand.NextVector2Circular(3f, 3f), 150, default, 1.2f);
+                    d.noGravity = true;
+                }
+                return;
+            }
+
             // Ledakan partikel saat charge selesai
             SoundEngine.PlaySound(SoundID.MaxMana, Projectile.Center);
-            if (!Main.dedServ)
-                Main.instance.CameraModifiers.Add(new PunchCameraModifier(Projectile.Center,
-                    Main.rand.NextVector2Unit(), 5f, 6f, 20, 1500f, "CometCharge"));
+            CometShake.Punch(Projectile.Center, 5f, 6f, 20, 1500f, "CometCharge");
             for (int i = 0; i < 50; i++)
             {
                 int type = i % 3 == 0 ? DustID.BlueTorch : DustID.Torch;
@@ -148,6 +159,11 @@ namespace CelestialArsenal.Content.Items.Weapons
             Projectile.NewProjectile(Projectile.GetSource_FromThis(), spawn, dir,
                 ModContent.ProjectileType<CometProjectile>(),
                 Projectile.damage, Projectile.knockBack, Projectile.owner, ai0: 1f);
+
+            // Mulai cooldown (muncul sebagai buff di HUD)
+            if (cfg.RightClickCooldownSeconds > 0f)
+                player.AddBuff(ModContent.BuffType<CelestialArsenal.Content.Buffs.CometCooldownBuff>(),
+                    (int)(cfg.RightClickCooldownSeconds * 60f));
         }
     }
 }
