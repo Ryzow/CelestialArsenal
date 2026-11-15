@@ -30,6 +30,11 @@ namespace CelestialArsenal
         [Range(0, 50)]
         public int CometManaCost;
 
+        // Mana per bintang Starfall Blade / Starfall Lance. 0 = gratis
+        [DefaultValue(2)]
+        [Range(0, 20)]
+        public int StarManaCost;
+
         // Mana untuk satu meteor besar (klik kanan). 0 = gratis
         [DefaultValue(60)]
         [Range(0, 200)]

@@ -33,6 +33,14 @@ namespace CelestialArsenal.Content.Items.Weapons
             return false;
         }
 
+        public static void AddStarTooltip(Mod mod, List<TooltipLine> tooltips)
+        {
+            int cost = ModContent.GetInstance<CelestialArsenalConfig>().StarManaCost;
+            if (cost > 0)
+                tooltips.Add(new TooltipLine(mod, "StarMana",
+                    Language.GetTextValue("Mods.CelestialArsenal.Common.StarMana", cost)));
+        }
+
         // Baris tooltip dinamis (angka mengikuti config)
         public static void AddTooltips(Mod mod, List<TooltipLine> tooltips, bool hasCharge)
         {

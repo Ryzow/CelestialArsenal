@@ -3,6 +3,8 @@ A cosmic sword that is both melee and magic. Swing it to call comets down from t
 
 [h2]Features[/h2]
 [list]
+[*] [b]Starfall Blade and Starfall Lance[/b]: pre-boss weapons that release homing stars.
+[*] [b]Starfall Set and Starfall Charm[/b]: early game armor and accessory for the melee/magic hybrid class.
 [*] [b]Comet Sword[/b]: a pre-Hardmode sword. Each swing calls a fiery comet down toward your cursor.
 [*] [b]Comet Sword Awakened[/b]: the Hardmode upgrade. Two comets per swing, plus a charge attack.
 [*] [b]Giant meteor[/b]: hold right click to charge, and the meteor falls on its own once fully charged. It explodes in a large area and sets enemies on fire.
@@ -13,6 +15,18 @@ A cosmic sword that is both melee and magic. Swing it to call comets down from t
 [/list]
 
 [h2]Recipes[/h2]
+[b]Starfall Blade / Starfall Lance[/b]
+[list]
+[*] 10 Gold or Platinum Bar
+[*] 8 Fallen Star
+[*] Crafted at an Anvil
+[/list]
+
+[b]Starfall armor and charm[/b]
+[list]
+[*] Gold or Platinum Bars and Fallen Stars, crafted at an Anvil (the Charm also needs 1 Chain)
+[/list]
+
 [b]Comet Sword[/b]
 [list]
 [*] 12 Meteorite Bar

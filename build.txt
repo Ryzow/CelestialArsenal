@@ -1,4 +1,4 @@
 displayName = Celestial Arsenal
-author = NamaKamu
-version = 0.2
+author = Ryrenn
+version = 0.2.1
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*

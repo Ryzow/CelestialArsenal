@@ -1,3 +1,21 @@
+[h1]Version 0.2.1[/h1]
+Early game update.
+
+[h2]Added[/h2]
+[list]
+[*] [b]Starfall Blade[/b]: pre-boss sword, each swing releases a homing star.
+[*] [b]Starfall Lance[/b]: pre-boss spear, launches a homing star from the tip.
+[*] [b]Starfall Set[/b] (Hood, Cuirass, Greaves) with a set bonus: -15% mana cost and +5% melee/magic damage.
+[*] [b]Starfall Charm[/b] accessory: +6% melee/magic damage, +3% crit, +20 max mana.
+[*] New config option: mana per star.
+[*] Animated 4-frame sprites for the new weapons and the star projectile.
+[/list]
+
+[h2]Notes[/h2]
+[list]
+[*] Armor sprites are a first pass and will be improved. Legs and arms can look slightly off while walking or swinging.
+[/list]
+
 [h1]Version 0.2[/h1]
 
 [h2]Added[/h2]

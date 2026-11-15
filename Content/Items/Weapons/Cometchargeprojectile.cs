@@ -1,4 +1,5 @@
 using System;
+using CelestialArsenal.Content.Buffs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -162,7 +163,7 @@ namespace CelestialArsenal.Content.Items.Weapons
 
             // Mulai cooldown (muncul sebagai buff di HUD)
             if (cfg.RightClickCooldownSeconds > 0f)
-                player.AddBuff(ModContent.BuffType<CelestialArsenal.Content.Buffs.CometCooldownBuff>(),
+                player.AddBuff(ModContent.BuffType<CometCooldownBuff>(),
                     (int)(cfg.RightClickCooldownSeconds * 60f));
         }
     }
