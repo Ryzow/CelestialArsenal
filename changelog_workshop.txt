@@ -1,0 +1,30 @@
+[h1]Version 0.2[/h1]
+
+[h2]Added[/h2]
+[list]
+[*] [b]Mana cost[/b]: each comet uses 6 mana, the giant meteor uses 60 mana (both configurable). Mana reduction is respected and mana potions are not drunk automatically.
+[*] Without enough mana you can still swing the sword, only the comets do not fall.
+[*] [b]Giant meteor cooldown[/b]: 8 seconds by default, shown as the [i]Comet Recharge[/i] buff with a countdown.
+[*] [b]Server config[/b]: mana per comet, mana per giant meteor, cooldown seconds.
+[*] [b]Client config[/b]: screen shake on/off and a screen shake intensity slider.
+[*] Tooltips now show mana cost and cooldown.
+[*] Config options now have readable names and descriptions.
+[/list]
+
+[h2]Changed[/h2]
+[list]
+[*] All screen shake now goes through one system that follows the client config, including the giant meteor explosion, charge release and small comet impacts.
+[*] Shake still fades with distance, and nothing is created when the toggle is off or intensity is 0.
+[*] The Awakened sword cannot start charging during cooldown or without enough mana.
+[*] If mana runs out during a charge, the meteor fizzles.
+[/list]
+
+[h2]Fixed[/h2]
+[list]
+[*] Compile error caused by the mod class having the same name as the mod namespace.
+[/list]
+
+[h1]Version 0.1[/h1]
+[list]
+[*] Initial release: Comet Sword, Comet Sword Awakened (Hardmode upgrade), hybrid melee/magic damage, glowmask, animated comets and the right click giant meteor.
+[/list]
